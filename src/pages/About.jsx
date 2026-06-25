@@ -65,19 +65,17 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-4xl mx-auto">
             <div>
               <div className="aspect-square bg-gray-200 rounded-3xl mb-8 overflow-hidden shadow-lg">
-                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=400" alt="Kaylea" className="w-full h-full object-cover" />
+                <img src="/kaylea.jpg" alt="Kaylea" className="w-full h-full object-cover" />
               </div>
               <h3 className="text-3xl font-bold text-gray-900 mb-2">Kaylea</h3>
-              <p className="text-primary-600 font-bold mb-4 uppercase tracking-wider">Co-Founder & Pet Expert</p>
-              <p className="text-gray-600">With 10+ years of experience in veterinary nursing, Kaylea ensures all pets receive expert medical attention if needed.</p>
+              <p className="text-primary-600 font-bold mb-4 uppercase tracking-wider">Co-Founder</p>
             </div>
             <div>
               <div className="aspect-square bg-gray-200 rounded-3xl mb-8 overflow-hidden shadow-lg">
-                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=400" alt="Tenielle" className="w-full h-full object-cover" />
+                <img src="/tenielle.jpg" alt="Tenielle" className="w-full h-full object-cover" />
               </div>
               <h3 className="text-3xl font-bold text-gray-900 mb-2">Tenielle</h3>
-              <p className="text-primary-600 font-bold mb-4 uppercase tracking-wider">Co-Founder & Dog Trainer</p>
-              <p className="text-gray-600">Tenielle is a certified animal behaviorist specializing in positive reinforcement training and enrichment.</p>
+              <p className="text-primary-600 font-bold mb-4 uppercase tracking-wider">Co-Founder</p>
             </div>
           </div>
         </div>

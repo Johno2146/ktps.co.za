@@ -1,32 +1,38 @@
 import React from 'react';
-import { Shield, Clock, Heart, Star, ChevronRight } from 'lucide-react';
+import { Shield, Clock, Heart, Car, ChevronRight, PawPrint } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
   const services = [
     {
-      title: 'Dog Walking',
-      description: 'Energetic walks tailored to your dog\'s fitness level and personality.',
-      rate: 'R150 / session',
-      icon: <Clock className="h-8 w-8 text-primary-600" />,
-    },
-    {
       title: 'Pet Sitting',
       description: 'Professional care in the comfort of your home. We keep your pets happy while you are away.',
-      rate: 'R200 / visit',
+      rate: 'From R300 / day',
       icon: <Shield className="h-8 w-8 text-primary-600" />,
     },
     {
-      title: 'Overnight Care',
-      description: 'Dedicated overnight stays for pets that need extra company and security.',
-      rate: 'R450 / night',
+      title: 'Pet Boarding',
+      description: 'Safe and comfortable boarding for your pets while you are away.',
+      rate: 'From R300 - R400 / day',
       icon: <Heart className="h-8 w-8 text-primary-600" />,
     },
     {
-      title: 'Grooming',
-      description: 'Premium grooming services to keep your pets looking and feeling their best.',
-      rate: 'R350 / session',
-      icon: <Star className="h-8 w-8 text-primary-600" />,
+      title: 'Daily Check-ins',
+      description: 'Short visits to ensure your pets are fed, happy, and well-cared for.',
+      rate: 'From R100 / visit',
+      icon: <Clock className="h-8 w-8 text-primary-600" />,
+    },
+    {
+      title: 'Dog Walking',
+      description: 'Energetic 30-minute walks tailored to your dog\'s fitness level.',
+      rate: 'From R100 / 30 mins',
+      icon: <PawPrint className="h-8 w-8 text-primary-600" />,
+    },
+    {
+      title: 'Pet Taxi',
+      description: 'Safe transport for your pets to appointments or any destination.',
+      rate: 'From R50 / trip + R5/km',
+      icon: <Car className="h-8 w-8 text-primary-600" />,
     },
   ];
 
@@ -83,6 +89,10 @@ const Home = () => {
                 <p className="text-gray-600 leading-relaxed mb-6 flex-grow">{service.description}</p>
               </div>
             ))}
+          </div>
+
+          <div className="text-center mb-20 text-gray-500 font-medium italic bg-white p-6 rounded-2xl shadow-sm border border-gray-100 max-w-2xl mx-auto">
+            Note: Costs depend on the quantity of pets and any additional requirements.
           </div>
 
           {/* Subscription Package */}
