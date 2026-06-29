@@ -174,9 +174,10 @@ const Contact = () => {
                           className="w-full px-6 py-4 rounded-2xl border border-gray-200 focus:border-primary-500 focus:ring-4 focus:ring-primary-50 outline-none transition-all appearance-none bg-white"
                         >
                           <option>Pet Sitting</option>
+                          <option>Pet Boarding</option>
+                          <option>Daily Check-ins</option>
                           <option>Dog Walking</option>
-                          <option>Grooming</option>
-                          <option>Overnight Care</option>
+                          <option>Pet Taxi</option>
                           <option>Other</option>
                         </select>
                       </div>
