@@ -13,17 +13,17 @@ const About = () => {
                 Our Passion is <span className="text-primary-600">Your Pets</span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                Kaylea and Tenielles' Pet Services (KTPS) was born out of a simple idea: every pet deserves to be treated like family. Founded in South Africa, we've grown from a small local service to a premium pet care provider.
+                Kaylee and Tenielles' Pet Services (KTPS) was born out of a simple idea: every pet deserves to be treated like family. Founded in South Africa, we've grown from a small local service to a premium pet care provider.
               </p>
               <p className="text-xl text-gray-600 leading-relaxed">
-                We understand that your pets are more than just animals—they're beloved members of your household. That's why we've dedicated ourselves to providing the highest level of care, security, and affection.
+                We understand that your pets are more than just animals, they are beloved members of your household. That's why we've dedicated ourselves to providing the highest level of care, security, and affection.
               </p>
             </div>
             <div className="relative">
               <div className="absolute inset-0 bg-primary-200 rounded-3xl transform rotate-3" />
               <img 
-                src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&q=80&w=1000" 
-                alt="Two founders with dogs" 
+                src="https://images.unsplash.com/photo-1553882809-a4f57e595701?auto=format&fit=crop&q=80&w=1000" 
+                alt="Dog running on a leash" 
                 className="relative z-10 rounded-3xl shadow-2xl w-full object-cover h-[500px]"
               />
             </div>
@@ -65,14 +65,14 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-4xl mx-auto">
             <div>
               <div className="aspect-square bg-gray-200 rounded-3xl mb-8 overflow-hidden shadow-lg">
-                <img src="/kaylea.jpg" alt="Kaylea" className="w-full h-full object-cover" />
+                <img src="/tenielle.jpg" alt="Kaylee" className="w-full h-full object-cover" />
               </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-2">Kaylea</h3>
+              <h3 className="text-3xl font-bold text-gray-900 mb-2">Kaylee</h3>
               <p className="text-primary-600 font-bold mb-4 uppercase tracking-wider">Co-Founder</p>
             </div>
             <div>
               <div className="aspect-square bg-gray-200 rounded-3xl mb-8 overflow-hidden shadow-lg">
-                <img src="/tenielle.jpg" alt="Tenielle" className="w-full h-full object-cover" />
+                <img src="/kaylee.jpg" alt="Tenielle" className="w-full h-full object-cover" />
               </div>
               <h3 className="text-3xl font-bold text-gray-900 mb-2">Tenielle</h3>
               <p className="text-primary-600 font-bold mb-4 uppercase tracking-wider">Co-Founder</p>
