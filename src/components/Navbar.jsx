@@ -11,8 +11,7 @@ const Navbar = () => {
         <div className="flex justify-between h-20">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center group">
-              <img src="/logo.png" className="h-[72px] w-[72px] object-contain transition-transform group-hover:scale-110" alt="KTPS Logo" />
-              <span className="ml-3 text-2xl font-bold text-gray-900 tracking-tight">KTPS</span>
+              <img src="/logo.png" className="h-24 w-24 object-contain transition-transform group-hover:scale-110" alt="KTPS Logo" />
             </Link>
           </div>
           <div className="hidden md:flex items-center space-x-8">
