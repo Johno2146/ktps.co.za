@@ -22,7 +22,7 @@ const About = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-primary-200 rounded-3xl transform rotate-3" />
               <img 
-                src="https://images.unsplash.com/photo-1553882809-a4f57e595701?auto=format&fit=crop&q=80&w=1000" 
+                src="https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&q=80&w=1000" 
                 alt="Dog running on a leash" 
                 className="relative z-10 rounded-3xl shadow-2xl w-full object-cover h-[500px]"
               />
