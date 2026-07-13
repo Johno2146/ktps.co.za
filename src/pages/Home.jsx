@@ -104,8 +104,8 @@ const Home = () => {
                   <p className="text-primary-100 text-lg mb-0">The ultimate subscription for busy owners. Guaranteed daily exercise and enrichment for your best friend.</p>
                 </div>
                 <div className="text-center md:text-right">
-                  <div className="text-5xl font-extrabold mb-2">R400</div>
-                  <div className="text-primary-100 font-bold mb-6">Per Month</div>
+                  <div className="text-5xl font-extrabold mb-2">From R400</div>
+                  <div className="text-primary-100 font-bold mb-6">per month</div>
                   <Link to="/contact" className="inline-block bg-white text-primary-600 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors">
                     Subscribe Now
                   </Link>
