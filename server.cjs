@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'dist')));
 
 // API endpoint for bookings
-app.post('/api/bookings', (req, res) => {
+app.post('/api/bookings', async (req, res) => {
   console.log('Received booking request:', req.body);
   const { name, email, service, message } = req.body;
 
@@ -20,8 +20,22 @@ app.post('/api/bookings', (req, res) => {
   }
 
   try {
+    // Save to local database
     const stmt = db.prepare('INSERT INTO bookings (name, email, service, message) VALUES (?, ?, ?, ?)');
     const info = stmt.run(name, email, service, message);
+
+    // Forward to Formspree to send email notification
+    try {
+      await fetch('https://formspree.io/f/mjgngpwv', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ name, email, service, message })
+      });
+      console.log('Email notification sent via Formspree');
+    } catch (emailErr) {
+      console.error('Formspree error:', emailErr.message);
+      // Don't fail the request if email fails
+    }
     
     res.status(201).json({ 
       success: true, 
