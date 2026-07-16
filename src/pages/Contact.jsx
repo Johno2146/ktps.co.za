@@ -16,15 +16,21 @@ const Contact = () => {
     message: ''
   });
 
+  const [submitting, setSubmitting] = useState(false);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setSubmitting(true);
     try {
+      const payload = { ...formData, _gotcha: '' };
       const response = await fetch('https://formspree.io/f/mjgngpwv', {
         method: 'POST',
+        mode: 'cors',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
       });
 
       if (response.ok) {
@@ -35,7 +41,22 @@ const Contact = () => {
       }
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert('There was an error submitting your request. Please try again.');
+      // Fallback: try standard form submission
+      try {
+        const form = e.target;
+        const formData2 = new FormData(form);
+        formData2.append('_gotcha', '');
+        await fetch('https://formspree.io/f/mjgngpwv', {
+          method: 'POST',
+          mode: 'no-cors',
+          body: formData2,
+        });
+        setSubmitted(true);
+      } catch (fallbackErr) {
+        alert('There was an error submitting your request. Please try again.');
+      }
+    } finally {
+      setSubmitting(false);
     }
   };
 
@@ -264,9 +285,10 @@ const Contact = () => {
                     </div>
                     <button 
                       type="submit" 
-                      className="w-full bg-primary-600 text-white py-5 rounded-2xl font-bold text-xl hover:bg-primary-700 transition-all shadow-lg hover:shadow-2xl flex items-center justify-center"
+                      disabled={submitting}
+                      className="w-full bg-primary-600 text-white py-5 rounded-2xl font-bold text-xl hover:bg-primary-700 transition-all shadow-lg hover:shadow-2xl flex items-center justify-center disabled:opacity-60 disabled:cursor-not-allowed"
                     >
-                      Send Booking Request <Send className="ml-3 h-6 w-6" />
+                      {submitting ? 'Sending...' : 'Send Booking Request'} <Send className="ml-3 h-6 w-6" />
                     </button>
                   </form>
                 </>
